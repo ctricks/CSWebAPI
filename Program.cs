@@ -7,7 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<BookStoreDatabaseSettings>(
     builder.Configuration.GetSection("BookStoreDatabase"));
 
+builder.Services.Configure<UserBoxDatabaseSettings>(
+    builder.Configuration.GetSection("UserBoxDatabase"));
+
 builder.Services.AddSingleton<BooksService>();
+builder.Services.AddSingleton<UsersService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

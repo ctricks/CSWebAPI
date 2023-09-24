@@ -1215,11 +1215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI.csproj",
+      "projectUniqueName": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\SampleWebAPI.csproj",
       "projectName": "SampleWebAPI",
-      "projectPath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI.csproj",
+      "projectPath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\SampleWebAPI.csproj",
       "packagesPath": "C:\\Users\\Bok\\.nuget\\packages\\",
-      "outputPath": "E:\\Project\\BOK\\SampleWebAPI\\obj\\",
+      "outputPath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bok\\AppData\\Roaming\\NuGet\\NuGet.Config",
