@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dyRWZpyD4GG8ktsbkvqMhTu1UHsSDljNBaxjXqgZyhvzZhvzysiNc9JVrR/QGTcxjW9GxV9M1K6gUttpfUHijw==",
+  "dgSpecHash": "pUcA1YMsQQphUgxX+BpOCo0t6nSpSV4dSDru3IJb0FH04JSlDM/XndkRa55dghutzi9rSGLxlhaKyO8HBQndIg==",
   "success": true,
-  "projectFilePath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\SampleWebAPI.csproj",
+  "projectFilePath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\CSWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bok\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Bok\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

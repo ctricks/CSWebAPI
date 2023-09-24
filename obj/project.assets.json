@@ -1215,9 +1215,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\SampleWebAPI.csproj",
-      "projectName": "SampleWebAPI",
-      "projectPath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\SampleWebAPI.csproj",
+      "projectUniqueName": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\CSWebAPI.csproj",
+      "projectName": "CSWebAPI",
+      "projectPath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\CSWebAPI.csproj",
       "packagesPath": "C:\\Users\\Bok\\.nuget\\packages\\",
       "outputPath": "E:\\Project\\BOK\\SampleWebAPI\\SampleWebAPI\\obj\\",
       "projectStyle": "PackageReference",

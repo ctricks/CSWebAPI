@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "vanA3Ml7iDoUfEupHW4OZi+1lRvKsfG4ybuTKUzxvZI=",
-  "Source": "SampleWebAPI",
-  "BasePath": "_content/SampleWebAPI",
+  "Hash": "KCMZdnOb3tiM9doSs5Rtl51bSm1mqP2xdZW/dSfvfas=",
+  "Source": "CSWebAPI",
+  "BasePath": "_content/CSWebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
