@@ -1,6 +1,12 @@
-﻿using Microsoft.Extensions.Options;
+﻿using CSWebAPI.Helpers;
+using CSWebAPI.Models;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using SampleWebAPI.Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace SampleWebAPI.Services
 {
@@ -8,7 +14,9 @@ namespace SampleWebAPI.Services
     {
         private readonly IMongoCollection<Users>? _usersCollection;
 
-        public UsersService(IOptions<UserBoxDatabaseSettings> userBoxDatabaseSettings)
+        private readonly AppSettings _appSettings;
+
+        public UsersService(IOptions<UserBoxDatabaseSettings> userBoxDatabaseSettings, IOptions<AppSettings> appSettings)
         {
             var mongoClient = new MongoClient(
                userBoxDatabaseSettings.Value.ConnectionString);
@@ -18,7 +26,33 @@ namespace SampleWebAPI.Services
                 );
             _usersCollection = mongoDatabase.GetCollection<Users>(
                 userBoxDatabaseSettings.Value.UsersCollectionName);
+
+            _appSettings = appSettings.Value;
         }
+
+        public AuthenticateResponse CreateToken(Users user)
+        {
+            // authentication successful so generate jwt token
+            var token = generateJwtToken(user);
+
+            return new AuthenticateResponse(user, token);
+        }
+
+        private string generateJwtToken(Users user)
+        {
+            // generate token that is valid for 7 days
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id) }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
+
         public async Task<List<Users>> GetUsersAsync() =>
             await _usersCollection.Find(_ => true).ToListAsync();
 

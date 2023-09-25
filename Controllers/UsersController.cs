@@ -1,4 +1,6 @@
 ﻿using Amazon.Runtime.Internal.Util;
+using CSWebAPI.Models;
+using CSWebAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using SampleWebAPI.Models;
@@ -14,10 +16,14 @@ namespace SampleWebAPI.Controllers
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly UsersService _userService;
+        private readonly UsersService _userService;        
 
-        public UsersController(UsersService usersService) =>
-            _userService = usersService;
+        public UsersController(UsersService usersService)
+        {
+            _userService = usersService;            
+        }
+
+
 
         //CB-09242023 Customized API
         
@@ -55,6 +61,34 @@ namespace SampleWebAPI.Controllers
 
             await _userService.CreateAsync(newUser);
             return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
+        }
+
+        //CB-09252023 Additional API for User Authentication
+        [HttpPost("UserAuthenticate")]
+        public async Task<IActionResult> Authenticate(AuthenticateRequest model)
+        {
+            var user = await _userService.GetUserAsync(model.Username);
+
+            if (user is null)
+            {
+                return NotFound();
+            }
+
+            //CB-09252023 To Check password hash if match on query user for Authentication
+            Encrypt enc = new Encrypt();
+            string HashUser = enc.GetHashPassword(model.Password);
+
+            if (HashUser != user.Password)
+            {
+                return NotFound();
+            }
+
+            var response = _userService.CreateToken(user);
+
+            if (response == null)
+                return BadRequest(new { message = "Username or password is incorrect" });
+
+            return Ok(response);
         }
 
         //-------------------------------------------------------------------

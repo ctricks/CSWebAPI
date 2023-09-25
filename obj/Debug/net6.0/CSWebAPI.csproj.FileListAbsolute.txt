@@ -8,6 +8,12 @@ E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\CSWebAPI.pdb
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\AWSSDK.Core.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\DnsClient.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\MongoDB.Bson.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\MongoDB.Driver.dll
@@ -18,6 +24,7 @@ E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Snappier.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\ZstdSharp.dll
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
 E:\Project\BOK\SampleWebAPI\SampleWebAPI\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
